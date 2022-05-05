@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class wallet extends Model {
+  class Wallet extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +13,32 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  wallet.init({
-    seed_phrase: DataTypes.STRING,
-    user_id: DataTypes.INTEGER,
-    token_id: DataTypes.INTEGER
+  Wallet.init({
+    seedPhrase: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'users',
+        key: 'id'
+      },
+    },
+    tokenId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'tokens',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
-    modelName: 'wallet',
+    modelName: 'Wallet',
+    tableName: 'wallets'
   });
-  return wallet;
+  return Wallet;
 };
