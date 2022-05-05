@@ -22,11 +22,19 @@ module.exports = (sequelize, DataTypes) => {
     },
     locationId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'locations',
+        key: 'id'
+      }
     },
     walletId: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      references: {
+        model: 'wallets',
+        key: 'id'
+      }
     }
   }, {
     sequelize,
