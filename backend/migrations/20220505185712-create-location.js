@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       latitude: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       longitude: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
-      diff_lvl: {
+      diffLvl: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      token_id: {
+      tokenId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
-      user_id: {
+      userId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
