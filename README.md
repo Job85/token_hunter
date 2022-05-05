@@ -8,8 +8,8 @@ Become the Jack Sparrow of Geocaching! Track down and discover the exact locatio
 - ** Node
 
 ## Diagrams
-[CHD](./assets/token_chd.png)
-[ERD](./assets/token_erd.png)
+[CHD](./backend/assets/token_chd.png)
+[ERD](./backend/assets/token_erd.png)
 
 ## App Work Flow
 [Token Trello](https://trello.com/b/uCrbG9pF/token-huntr-app)
