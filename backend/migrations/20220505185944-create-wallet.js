@@ -8,13 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      seed_phrase: {
+      seedPhrase: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      user_id: {
+      userId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
-      token_id: {
+      tokenId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
