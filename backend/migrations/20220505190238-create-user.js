@@ -9,15 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       email: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      hashed_password: {
+      hashedPassword: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      wallet_id: {
-        type: Sequelize.INTEGER
-      },
-      location_id: {
+      walletId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
