@@ -11,6 +11,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Token.belongsTo(models.Location, {
+        foreignKey: 'locationId',
+        as: 'location',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
+      Token.belongsToMany(models.Wallet, {
+        foreignKey: 'walletId',
+        as: 'wallet',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Token.init({
