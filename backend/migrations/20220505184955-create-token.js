@@ -8,13 +8,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      id_code: {
+      code: {
+        allowNull: false,
         type: Sequelize.STRING
       },
-      location_id: {
+      locationId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
-      wallet_id: {
+      walletId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
