@@ -11,7 +11,17 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-
+      Location.belongsTo(models.User, {
+        foreignKey: 'userId',
+        as: 'user',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
+      Location.hasMany(models.Token, {
+        foreignKey: 'tokenId',
+        as: 'token',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Location.init({
@@ -28,14 +38,6 @@ module.exports = (sequelize, DataTypes) => {
     diffLvl: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    tokenId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'tokens',
-        key: 'id'
-      }
     },
     userId: {
       type: DataTypes.INTEGER,
