@@ -13,14 +13,12 @@ module.exports = {
       email: 'TestEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 2,
-      locationId: 0,
       createdAt: new Date(),
       updateAt: new Date()
     }, {
       email: 'TrialEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 3,
-      locationId: 0,
       createdAt: new Date(),
       updateAt: new Date()
     }])
