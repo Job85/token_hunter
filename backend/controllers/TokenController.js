@@ -9,3 +9,7 @@ const GetToken = async (req, res) => {
         throw error
     }
 }
+
+module.exports = {
+    GetToken
+}
