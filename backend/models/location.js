@@ -20,7 +20,8 @@ module.exports = (sequelize, DataTypes) => {
       Location.hasMany(models.Token, {
         foreignKey: 'tokenId',
         as: 'token',
-        onUpdate: 'CASCADE'
+        through: models.TokenLocation,
+        foreignKeyConstraint: 'tokenId'
       })
     }
   }

@@ -1,5 +1,5 @@
 const Router = require('express').Router()
-const controller = require('../controller/TokenController')
+const controller = require('../controllers/TokenController')
 
 Router.get('/', controller.GetToken)
 
