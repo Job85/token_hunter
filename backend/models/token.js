@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       Token.belongsTo(models.Location, {
         foreignKey: 'locationId',
         as: 'location',
-        onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
       })
       Token.belongsToMany(models.Wallet, {
@@ -34,7 +33,6 @@ module.exports = (sequelize, DataTypes) => {
     locationId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      onDelete: 'CASCADE',
       references: {
         model: 'locations',
         key: 'id'
