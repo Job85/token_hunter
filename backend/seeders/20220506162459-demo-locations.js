@@ -7,6 +7,7 @@ module.exports = {
       longitude: -82.486329,
       diffLvl: 'Easy-Demo',
       userId: 1,
+      tokenId: 1,
       createdAt: new Date(),
       updateAt: new Date()
     }, {
@@ -14,6 +15,7 @@ module.exports = {
       longitude: -82.435767,
       diffLvl: 'Medium-Demo',
       userId: 1,
+      tokenId: 2,
       createdAt: new Date(),
       updateAt: new Date()
     }, {
@@ -21,6 +23,7 @@ module.exports = {
       longitude: -82.373926,
       diffLvl: 'Hard-Demo',
       userId: 1,
+      tokenId: 3,
       createdAt: new Date(),
       updateAt: new Date()
     }, {
@@ -28,6 +31,7 @@ module.exports = {
       longitude: -82.404310,
       diffLvl: 'Medium-Demo',
       userId: 1,
+      tokenId: 4,
       createdAt: new Date(),
       updateAt: new Date()
     }])
