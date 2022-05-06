@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('tokens', [{
       code: 'D3M0 C0D3',
       locationId: 1,
@@ -38,15 +38,10 @@ module.exports = {
       walletId: 3,
       createdAt: new Date(),
       updatedAt: new Date()
-    },])
+    }])
   },
 
-  async down(queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('tokens', null, {});
   }
 };
