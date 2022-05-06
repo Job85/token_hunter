@@ -6,17 +6,23 @@ module.exports = {
       email: 'DemoEmail@email.com',
       hashedPassword: 'DemoPassword',
       walletId: 1,
-      locationId: 1
+      locationId: 1,
+      createdAt: new Date(),
+      updateAt: new Date()
     }, {
       email: 'TestEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 2,
-      locationId: 0
+      locationId: 0,
+      createdAt: new Date(),
+      updateAt: new Date()
     }, {
       email: 'TrialEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 3,
-      locationId: 0
+      locationId: 0,
+      createdAt: new Date(),
+      updateAt: new Date()
     }])
   },
 
