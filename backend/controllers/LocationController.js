@@ -2,14 +2,14 @@ const { Location } = require('../models')
 
 const GetLocation = async (req, res) => {
     try {
-        const locale = await Location.findAll()
-        console.log(locale)
-        res.send(locale)
+        const location = await Location.findAll()
+        console.log(location)
+        res.send(location)
     } catch (error) {
-        throw (error)
+        throw error
     }
 }
 
-module.eports = {
+module.exports = {
     GetLocation
 }
