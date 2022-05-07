@@ -8,19 +8,21 @@ module.exports = {
       walletId: 1,
       locationId: 1,
       createdAt: new Date(),
-      updateAt: new Date()
+      updatedAt: new Date()
     }, {
       email: 'TestEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 2,
+      locationId: null,
       createdAt: new Date(),
-      updateAt: new Date()
+      updatedAt: new Date()
     }, {
       email: 'TrialEmail@email.com',
       hashedPassword: 'TestPassword',
       walletId: 3,
+      locationId: null,
       createdAt: new Date(),
-      updateAt: new Date()
+      updatedAt: new Date()
     }])
   },
 
