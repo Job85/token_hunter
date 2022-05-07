@@ -13,7 +13,10 @@ const GetUser = async (req, res) => {
 
 const CreateUser = async (req, res) => {
     try {
-        const post = await post.create({ ...req.body })
+        let createUser = {
+            ...req.body
+        }
+        let post = await User.create(createUser)
         console.log(post)
         res.send(post)
     } catch (error) {
