@@ -14,7 +14,8 @@ const GetWallet = async (req, res) => {
 const CreateWallet = async (req, res) => {
     try {
         const post = await post.create({ ...req.body })
-
+        console.log(post)
+        res.send(post)
     } catch (error) {
         throw error
     }
