@@ -1,4 +1,5 @@
 const { Wallet } = require('../models')
+const { post } = require('../routes/WalletRouter')
 
 const GetWallet = async (req, res) => {
     try {
@@ -10,6 +11,16 @@ const GetWallet = async (req, res) => {
     }
 }
 
+const CreateWallet = async (req, res) => {
+    try {
+        const post = await post.create({ ...req.body })
+
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
-    GetWallet
+    GetWallet,
+    CreateWallet
 }
