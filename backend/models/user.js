@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     locationId: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       onDelete: 'CASCADE',
       references: {
         model: 'locations',
