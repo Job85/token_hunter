@@ -30,6 +30,26 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
+    seedPhrase2: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    seedPhrase3: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    seedPhrase4: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    seedPhrase5: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    seedPhrase6: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
