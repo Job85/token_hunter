@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Wallet.init({
-    seedPhrase: {
+    seedPhrase1: {
       type: DataTypes.STRING,
       allowNull: false
     },
