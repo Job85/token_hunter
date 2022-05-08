@@ -10,14 +10,18 @@ module.exports = {
       },
       email: {
         allowNull: false,
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true,
+        validate: {
+          isEmail: true
+        }
       },
-      hashedPassword: {
+      passwordDigest: {
         allowNull: false,
         type: Sequelize.STRING
       },
       walletId: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
