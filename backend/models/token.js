@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     walletId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      field: 'wallet_id'
     }
   }, {
     sequelize,
