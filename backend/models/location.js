@@ -13,7 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       Location.belongsTo(models.User)
       Location.hasMany(models.Token, {
-        foreignKey: 'tokenId',
+        foreignKey: 'token_id',
+        onUpdate: 'CASCADE'
       })
     }
   }
