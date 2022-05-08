@@ -14,12 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       Wallet.hasMany(models.Token, {
         foreignKey: 'tokenId'
       })
-      Wallet.belongsTo(models.User, {
-        foreignKey: 'userId',
-        as: 'user',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+      Wallet.belongsTo(models.User)
     }
   }
   Wallet.init({
@@ -50,21 +45,13 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      field: 'user_id',
       onDelete: 'CASCADE',
       references: {
         model: 'users',
         key: 'id'
       },
     },
-    tokenId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'tokens',
-        key: 'id'
-      }
-    }
   }, {
     sequelize,
     modelName: 'Wallet',
