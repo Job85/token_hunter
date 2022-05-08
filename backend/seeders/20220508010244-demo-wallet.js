@@ -9,8 +9,8 @@ module.exports = {
       seedPhrase4: 'Prelim',
       seedPhrase5: 'Tryout',
       seedPhrase6: 'Eval',
-      userId: 1,
-      tokenId: 1,
+      user_id: 1,
+      token_id: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }])
