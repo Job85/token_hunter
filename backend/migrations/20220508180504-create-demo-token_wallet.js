@@ -1,30 +1,28 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('tokens', {
+    await queryInterface.createTable('tokenWallets', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      code: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      locationId: {
-        allowNull: false,
+      walletId: {
         type: Sequelize.INTEGER,
-        field: 'location_id',
+        field: 'wallet_id',
         references: {
-          model: 'locations',
+          model: 'wallets',
           key: 'id'
         }
       },
-      walletId: {
-        allowNull: false,
+      tokenId: {
         type: Sequelize.INTEGER,
-        field: 'wallet_id'
+        field: 'token_id',
+        references: {
+          model: 'tokens',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +35,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('tokens');
+    await queryInterface.dropTable('tokenWallets');
   }
 };
