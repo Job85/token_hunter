@@ -2,9 +2,9 @@ const { Location } = require('../models')
 
 const GetLocation = async (req, res) => {
     try {
-        const banana = await Location.findAll()
-        console.log(banana)
-        res.send(banana)
+        const location = await Location.findAll()
+        console.log(location)
+        res.send(location)
     } catch (error) {
         throw error
     }
