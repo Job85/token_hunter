@@ -7,7 +7,6 @@ module.exports = {
       longitude: -82.486329,
       diffLvl: 'Easy-Demo',
       userId: 1,
-      tokenId: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }])
