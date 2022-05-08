@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      const Token = sequelize.define('token', { code: DataTypes.STRING })
       Token.belongsTo(models.Location, {
         foreignKey: 'locationId',
         as: 'location',
