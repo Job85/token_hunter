@@ -6,7 +6,7 @@ module.exports = {
       latitude: 28.087692,
       longitude: -82.486329,
       diffLvl: 'Easy-Demo',
-      userId: 1,
+      user_id: 1,
       createdAt: new Date(),
       updatedAt: new Date()
     }])
