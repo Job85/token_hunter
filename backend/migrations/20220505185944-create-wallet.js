@@ -8,7 +8,27 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      seedPhrase: {
+      seedPhrase1: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      seedPhrase2: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      seedPhrase3: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      seedPhrase4: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      seedPhrase5: {
+        allowNull: false,
+        type: Sequelize.STRING
+      },
+      seedPhrase6: {
         allowNull: false,
         type: Sequelize.STRING
       },
