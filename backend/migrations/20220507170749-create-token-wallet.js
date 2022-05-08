@@ -9,10 +9,20 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       walletId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field: 'wallet_id',
+        references: {
+          model: 'wallets',
+          key: 'id'
+        }
       },
       tokenId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field: 'token_id',
+        references: {
+          model: 'tokens',
+          key: 'id'
+        }
       },
       createdAt: {
         allowNull: false,
