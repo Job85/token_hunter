@@ -25,8 +25,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Location.init({
-    sequelize,
-    paranoid: true,
     latitude: {
       type: DataTypes.INTEGER,
       allowNull: false
