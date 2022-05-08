@@ -52,6 +52,11 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       },
     },
+    tokenId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      field: 'token_id'
+    }
   }, {
     sequelize,
     modelName: 'Wallet',
