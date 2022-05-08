@@ -14,11 +14,18 @@ module.exports = {
       },
       locationId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field: 'location_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'locations',
+          key: 'id'
+        }
       },
       walletId: {
         allowNull: false,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        field: 'wallet_id'
       },
       createdAt: {
         allowNull: false,
