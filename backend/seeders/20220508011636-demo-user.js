@@ -6,7 +6,9 @@ module.exports = {
       email: 'DemoUser@email.com',
       passwordDigest: 'unhashedPassword',
       walletId: null,
-      locationId: null
+      locationId: null,
+      createdAt: new Date(),
+      updatedAt: new Date()
     }])
   },
 
