@@ -39,24 +39,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    walletId: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'wallets',
-        key: 'id'
-      },
-    },
-    locationId: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      onDelete: 'CASCADE',
-      references: {
-        model: 'locations',
-        key: 'id'
-      }
-    },
   }, {
     sequelize,
     modelName: 'User',
