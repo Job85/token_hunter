@@ -37,7 +37,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       tokenId: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER
       },
       createdAt: {
