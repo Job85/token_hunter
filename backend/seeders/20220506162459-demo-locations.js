@@ -9,7 +9,7 @@ module.exports = {
       userId: 1,
       tokenId: 1,
       createdAt: new Date(),
-      updateAt: new Date()
+      updatedAt: new Date()
     }])
   },
 
