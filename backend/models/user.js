@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     walletId: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       onDelete: 'CASCADE',
       references: {
         model: 'wallets',
