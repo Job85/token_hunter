@@ -20,14 +20,6 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      walletId: {
-        allowNull: true,
-        type: Sequelize.INTEGER
-      },
-      locationId: {
-        allowNull: true,
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
