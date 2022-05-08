@@ -10,6 +10,22 @@ const GetLocation = async (req, res) => {
     }
 }
 
+const CreateLocation = async (req, res) => {
+    const userId = parseInt(req.params.userId)
+    try {
+        let coords = {
+            userId,
+            ...req.body
+        }
+        const createLocation = await Location.create(coords)
+        console.log(createLocation)
+        res.send(createLocation)
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
-    GetLocation
+    GetLocation,
+    CreateLocation
 }
