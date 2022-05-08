@@ -30,7 +30,6 @@ module.exports = (sequelize, DataTypes) => {
     locationId: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      onDelete: 'CASCADE',
       references: {
         model: 'locations',
         key: 'id'
