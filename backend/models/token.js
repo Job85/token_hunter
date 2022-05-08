@@ -22,8 +22,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Token.init({
-    sequelize,
-    paranoid: true,
     code: {
       type: DataTypes.STRING,
       allowNull: false
@@ -48,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
+    paranoid: true,
     modelName: 'Token',
     tableName: 'tokens'
   });
