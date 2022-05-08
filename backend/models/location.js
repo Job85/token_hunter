@@ -22,16 +22,16 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        min: -90,
-        max: 90
+        min: -90.000000,
+        max: 90.000000
       }
     },
     longitude: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        min: -180,
-        max: 180
+        min: -180.000000,
+        max: 180.000000
       }
     },
     diffLvl: {
