@@ -11,16 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Location.belongsTo(models.User, {
-        foreignKey: 'userId',
-        as: 'user',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+      Location.belongsTo(models.User)
       Location.hasMany(models.Token, {
         foreignKey: 'tokenId',
-        as: 'token',
-        onUpdate: 'CASCADE'
       })
     }
   }
