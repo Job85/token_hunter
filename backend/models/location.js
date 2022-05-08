@@ -27,11 +27,19 @@ module.exports = (sequelize, DataTypes) => {
   Location.init({
     latitude: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        min: -90,
+        max: 90
+      }
     },
     longitude: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        min: -180,
+        max: 180
+      }
     },
     diffLvl: {
       type: DataTypes.STRING,
@@ -48,6 +56,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
+    validate: {
+      bothCoordsOrNone() {
+        if ((this.latitude === null) !== (this.longitude === null)) {
+          throw new Error('Either both latitude and longitude, or neither!');
+        }
+      }
+    },
     modelName: 'Location',
     tableName: 'locations'
   });
