@@ -17,10 +17,9 @@ const EditForm = () => {
 
     useEffect(() => {
         let isCancelled = false
+        let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api/location/${location_id}` : `https://token-huntr.herokuapp.com/api/location/${location_id}`
         const getCache = async () => {
-            const res = await axios.get(
-                `http://localhost:3001/api/location/${location_id}`
-            )
+            const res = await axios.get(url)
             if (!isCancelled) {
                 setFormValues(res.data)
             }

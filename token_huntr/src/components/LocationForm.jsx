@@ -22,8 +22,8 @@ const LocationForm = ({ user }) => {
     }
 
     const CreateCache = async () => {
-        // let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr-app.herokuapp.com/api//location/create_cache/${user_id}`
-        let url = process.env.NODE_ENV === `http://localhost:3001/api/location/create_cache/${user_id}`
+        let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr.herokuapp.com/api/location/create_cache/${user_id}`
+        // let url = process.env.NODE_ENV === `http://localhost:3001/api/location/create_cache/${user_id}`
         await axios({
             url,
             method: 'post',
@@ -40,7 +40,7 @@ const LocationForm = ({ user }) => {
             longitude: '',
             level: ''
         })
-        axios.post(`http://localhost:3001/api/location/create_cache/${user_id}`, formValues)
+        axios.post(url, formValues)
         // return newLocation
         // navigate('/locations'),
         // window.location.reload(false)
