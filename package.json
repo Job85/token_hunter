@@ -2,7 +2,7 @@
   "name": "token_hunter",
   "version": "1.0.0",
   "description": "Become the Jack Sparrow of Geocaching! Track down and discover the exact location of a geocache to earn valuable tokens. Some tokens are worth more depending on their level of difficulty in finding.",
-  "main": "index.js",
+  "main": "./token_huntr/src/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
