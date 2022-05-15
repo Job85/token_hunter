@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Job85/token_hunter/issues"
   },
-  "homepage": "https://github.com/Job85/token_hunter#readme"
+  "homepage": "https://github.com/Job85/token_hunter#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
 }
