@@ -4,7 +4,10 @@
   "description": "Become the Jack Sparrow of Geocaching! Track down and discover the exact location of a geocache to earn valuable tokens. Some tokens are worth more depending on their level of difficulty in finding.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "repository": {
     "type": "git",
