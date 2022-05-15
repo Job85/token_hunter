@@ -10,6 +10,8 @@ const LocationForm = ({ user }) => {
     // let { user_id } = useParams()
     const user_id = user.id
     // console.log(user_id)
+    let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr.herokuapp.com/api/location/create_cache/${user_id}`
+
     const [formValues, setFormValues] = useState({
         latitude: '',
         longitude: '',
@@ -22,7 +24,6 @@ const LocationForm = ({ user }) => {
     }
 
     const CreateCache = async () => {
-        let url = process.env.NODE_ENV === 'local' ? `http://localhost:3001/api//location/create_cache/${user_id}` : `https://token-huntr.herokuapp.com/api/location/create_cache/${user_id}`
         // let url = process.env.NODE_ENV === `http://localhost:3001/api/location/create_cache/${user_id}`
         await axios({
             url,
